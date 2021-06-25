@@ -8,9 +8,9 @@ It is very easy to manually analyze a C/C++/Objective-C project with SonarQube:
 .. https://docs.sonarqube.org/latest/user-guide/user-token/[Generate a unique token] and set it as "sonar.login"
 .. Set `sonar.host.url` to your SonarQube server URL
 . Download and unzip the Build Wrapper for MacOS from {SonarQube URL}/static/cpp/build-wrapper-macosx-x86.zip
-. Add the Build Wrapper to your `%PATH%`
+. Add the Build Wrapper to your `$PATH`
 . Download and unzip the https://docs.sonarqube.org/latest/analysis/scan/sonarscanner/[SonarScanner] for MacOS
-. Add the bin directory of the SonarScanner to your `%PATH%`
+. Add the bin directory of the SonarScanner to your `$PATH`
 . Wrap your clean build command with the Build Wrapper. E.g.: `build-wrapper-macosx-x86 --out-dir bw-output xcodebuild clean build` (with `bw-output` being the same directory that the one set in `sonar-project.properties`)
 . Run `sonar-scanner`
 
