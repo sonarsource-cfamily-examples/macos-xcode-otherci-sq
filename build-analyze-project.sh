@@ -13,6 +13,6 @@ export PATH=$HOME/.sonar/build-wrapper-macosx-x86:$PATH
 
 autoreconf --install
 ./configure
-build-wrapper --out-dir $BW_OUTPUT xcodebuild clean build
+build-wrapper-macosx-x86 --out-dir $BW_OUTPUT xcodebuild clean build
 
 sonar-scanner
