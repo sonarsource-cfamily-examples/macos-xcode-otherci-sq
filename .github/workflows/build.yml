@@ -1,0 +1,18 @@
+name: Build
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    types: [opened, synchronize, reopened]
+jobs:
+  build-analyze:
+    runs-on: macos-latest
+    steps:
+      - uses: actions/checkout@v1
+      - name: Build and analyze on SonarCloud
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
+        run: ./build-analyze.sh
+        shell: bash
