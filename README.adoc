@@ -8,7 +8,7 @@ It is very easy to manually analyze a C, C++ and Objective-C project with SonarQ
 . Create a `sonar-project.properties` file to store your configuration
 .. Add a projectKey of your project
 .. Add a Build Wrapper output directory
-.. https://docs.sonarqube.org/latest/user-guide/user-token/[Generate a unique token] and set it as "sonar.login"
+.. https://docs.sonarqube.org/latest/user-guide/user-token/[Generate a unique token] and set it as "sonar.login" (`SONARQUBE_TOKEN` in this example project)
 .. Set `sonar.host.url` to your SonarQube server URL
 . Download and unzip the Build Wrapper for MacOS from {SonarQube URL}/static/cpp/build-wrapper-macosx-x86.zip
 . Add the Build Wrapper to your `$PATH`
