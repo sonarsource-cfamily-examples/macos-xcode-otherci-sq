@@ -9,7 +9,7 @@ jobs:
   build-analyze:
     runs-on: macos-latest
     steps:
-      - uses: actions/checkout@v1
+      - uses: actions/checkout@v4
       - name: Build and analyze on SonarCloud
         env:
           SONAR_HOST_URL: ${{ secrets.SONAR_HOST_URL }}
