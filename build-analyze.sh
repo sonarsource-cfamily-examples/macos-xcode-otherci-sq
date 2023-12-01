@@ -6,7 +6,7 @@ git fetch --unshallow
 
 export SONAR_HOST_URL="${SONAR_HOST_URL}" # Comes from a Github secret
 #SONAR_TOKEN= # Access token coming from SonarQube projet creation page. In this example, it is defined in the environement through a Github secret.
-export SONAR_SCANNER_VERSION="4.8.0.2856" # Find the latest version in the "Mac OS" link on this page:
+export SONAR_SCANNER_VERSION="5.0.1.3006" # Find the latest version in the "Mac OS" link on this page:
                                           # https://docs.sonarqube.org/latest/analysis/scan/sonarscanner/
 export BUILD_WRAPPER_OUT_DIR="bw-output" # Directory where build-wrapper output will be placed
 
