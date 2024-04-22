@@ -12,8 +12,8 @@ It is very easy to manually analyze a C, C++ and Objective-C project with SonarQ
 . Add the Build Wrapper to your `$PATH`
 . Download and unzip the https://docs.sonarqube.org/latest/analysis/scan/sonarscanner/[SonarScanner] for macOS
 . Add the bin directory of the SonarScanner to your `$PATH`
-. Wrap your clean build command with the Build Wrapper. E.g.: `build-wrapper-macosx-x86 --out-dir bw-output xcodebuild clean build` (with `bw-output` being the same directory as the one set in `sonar-project.properties`)
-. Run `sonar-scanner`
+. Wrap your clean build command with the Build Wrapper. E.g.: `build-wrapper-macosx-x86 --out-dir bw-output xcodebuild clean build`
+. Run `sonar-scanner` specifying `-Dsonar.cfamily.build-wrapper-output=bw-output` (with `bw-output` being the same directory as the one passed to Build Wrapper as `--out-dir`)
 
 You can take a look at the link:sonar-project.properties[sonar-project.properties] and link:build-analyze.sh[build-analyze.sh] (a script that downloads the `sonar-scanner` and the Build Wrapper before compiling and analyzing the project) to see it in practice. Please be aware that the SonarQube server URLs and the `sonar.login` are not completed in these examples.
 
