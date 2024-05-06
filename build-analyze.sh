@@ -28,5 +28,8 @@ xcodebuild -project macos-xcode.xcodeproj clean
 # Build inside the build-wrapper
 build-wrapper-macosx-x86 --out-dir $BUILD_WRAPPER_OUT_DIR xcodebuild -project macos-xcode.xcodeproj -configuration Release
 
-# Run sonar scanner
+# Run sonar scanner (if using version 10.6 or later)
 sonar-scanner -Dsonar.host.url="${SONAR_HOST_URL}" -Dsonar.login=$SONAR_TOKEN -Dsonar.cfamily.compile-commands=$BUILD_WRAPPER_OUT_DIR/compile-commands.json
+
+# # Run sonar scanner (if using version 10.5 or earlier)
+# sonar-scanner -Dsonar.host.url="${SONAR_HOST_URL}" -Dsonar.login=$SONAR_TOKEN -Dsonar.cfamily.build-wrapper-output=$BUILD_WRAPPER_OUT_DIR
