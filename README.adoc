@@ -25,8 +25,8 @@ You can take a look at the link:sonar-project.properties[sonar-project.propertie
 
 = Documentation
 - https://docs.sonarqube.org/latest/analysis/languages/cfamily/[Documentation of the C, C++ and Objective-C plugin and its Build Wrapper]
-- https://docs.sonarqube.org/latest/analyzing-source-code/languages/c-family/#analysis-cache[Configuring C, C++ and Objective-C analysis cache]
-- https://docs.sonarqube.org/latest/analyzing-source-code/languages/c-family/#parallel-code-scan[Configuring multithreaded execution]
+- https://docs.sonarsource.com/sonarqube/latest/analyzing-source-code/languages/c-family/customizing-the-analysis/#analysis-cache[Configuring C, C++ and Objective-C analysis cache]
+- https://docs.sonarsource.com/sonarqube/latest/analyzing-source-code/languages/c-family/customizing-the-analysis/#parallel-code-scan[Configuring multithreaded execution]
 
 = macOS\XCodeBuild
 
