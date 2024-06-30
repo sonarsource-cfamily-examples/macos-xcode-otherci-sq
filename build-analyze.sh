@@ -29,4 +29,6 @@ xcodebuild -project macos-xcode.xcodeproj clean
 build-wrapper-macosx-x86 --out-dir $BUILD_WRAPPER_OUT_DIR xcodebuild -project macos-xcode.xcodeproj -configuration Release
 
 # Run sonar scanner
-sonar-scanner -Dsonar.host.url="${SONAR_HOST_URL}" -Dsonar.login=$SONAR_TOKEN -Dsonar.cfamily.build-wrapper-output=$BUILD_WRAPPER_OUT_DIR
+sonar-scanner -Dsonar.host.url="${SONAR_HOST_URL}" -Dsonar.login=$SONAR_TOKEN -Dsonar.cfamily.compile-commands=$BUILD_WRAPPER_OUT_DIR/compile_commands.json
+# if you are using using SonarQube 10.5 or earlier, replace -Dsonar.cfamily.compile-commands with -Dsonar.cfamily.build-wrapper-output=$BUILD_WRAPPER_OUT_DIR
+# as build-wrapper does not generate a compile_commands.json file before SonarQube 10.6
